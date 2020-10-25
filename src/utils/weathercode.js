@@ -18,7 +18,9 @@ const weatherCode = (latitude, longitude, city, callback) => {
             const tempDegree = body.current.temperature;
             const precpitate = body.current.precip;
             const weatherDescription = body.current.weather_descriptions[0];
-            const forecast = weatherDescription + ". It is currently " + tempDegree + " degrees out. There is a " + precpitate + "% chance of rain.";
+            const windSpeed = body.current.wind_speed;
+            const visibility = body.current.visibility;
+            const forecast = weatherDescription + ". It is currently " + tempDegree + " degrees out. There is a " + precpitate + "% chance of rain. Current Wind Speed is " + windSpeed + " with Visibility of " + visibility + " meters." ;
             const country = body.location.country;
             const name = body.location.name;
             const region = body.location.region;
